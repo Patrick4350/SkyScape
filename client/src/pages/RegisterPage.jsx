@@ -11,11 +11,18 @@ export default function RegisterPage() {
         ev.preventDefault(); // Prevent default form submission
     
         try {
-            const response = await axios.get('http://localhost:4000/test');
+            const response = await axios.get('/test');
             console.log(response.data); // Log the response data
         } catch (error) {
             console.error('Error fetching data:', error.message); // Log the error message
         }
+
+        axios.post('/register', {
+            name,
+            email,
+            password,
+        });
+
     }
     
 
