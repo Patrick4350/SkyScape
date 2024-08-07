@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(cors({
     credentials: true,
-    origin: 'https://turbo-adventure-w6jr5qpvgxxf5qv6-5173.app.github.dev',
+    origin: 'http://localhost:5173',
 }));
 
 console.log(process.env.MONGO_URL);
